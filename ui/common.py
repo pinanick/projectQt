@@ -1,16 +1,9 @@
-"""Общие вспомогательные функции для таблиц и подписей."""
-
-from PyQt6.QtWidgets import (
-    QAbstractItemView, QHeaderView, QLabel,
-    QTableWidget, QTableWidgetItem, QVBoxLayout,
-)
+"""Общие настройки таблиц, которые создаёт Qt Designer."""
+from PyQt6.QtWidgets import QAbstractItemView, QHeaderView, QTableWidgetItem
 
 
-def create_table(columns, stretch_column=None):
-    table = QTableWidget()
-    table.setColumnCount(len(columns))
-    table.setHorizontalHeaderLabels(columns)
-    # Строки можно выбирать, но нельзя редактировать прямо в таблице.
+def configure_table(table, stretch_column=None):
+    # Запрещаем редактировать данные непосредственно в журнале.
     table.setEditTriggers(QAbstractItemView.EditTrigger.NoEditTriggers)
     table.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
     table.setSelectionMode(QAbstractItemView.SelectionMode.SingleSelection)
@@ -21,17 +14,7 @@ def create_table(columns, stretch_column=None):
         table.horizontalHeader().setSectionResizeMode(
             stretch_column, QHeaderView.ResizeMode.Stretch
         )
-    return table
 
 
-def page_title(text, description):
-    # Обычные QLabel.
-    layout = QVBoxLayout()
-    layout.addWidget(QLabel(text))
-    layout.addWidget(QLabel(description))
-    return layout
-
-
-def make_item(value, color=None):
-    # color оставлен для совместимости со страницами событий и инцидентов.
+def make_item(value):
     return QTableWidgetItem(str(value))

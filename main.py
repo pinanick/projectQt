@@ -10,6 +10,7 @@ from ui.main_window import MainWindow
 
 
 def main():
+    # QApplication обрабатывает события мыши, клавиатуры и окон Qt.
     app = QApplication(sys.argv)
     app.setApplicationName("CyberLab")
 
@@ -21,6 +22,7 @@ def main():
     if repo.get_event_counts()["total"] == 0:
         repo.add_events(generate_events(count=40))
 
+    # Все вкладки получают один Repository через главное окно.
     window = MainWindow(repo)
     window.show()
     try:

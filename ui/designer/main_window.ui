@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>MainWindow</class>
+  <widget class="QMainWindow" name="MainWindow">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>920</width>
+        <height>600</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>CyberLab — учебный проект</string>
+    </property>
+    <widget class="QWidget" name="centralwidget">
+      <layout class="QVBoxLayout" name="mainLayout">
+        <item>
+          <layout class="QHBoxLayout" name="actionsLayout">
+            <item>
+              <widget class="QPushButton" name="generateButton">
+                <property name="text">
+                  <string>Сгенерировать события</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QPushButton" name="analyzeButton">
+                <property name="text">
+                  <string>Анализировать</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <widget class="QPushButton" name="rulesButton">
+                <property name="text">
+                  <string>Настроить правило</string>
+                </property>
+              </widget>
+            </item>
+            <item>
+              <spacer name="actionsSpacer">
+                <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                  <size>
+                    <width>40</width>
+                    <height>20</height>
+                  </size>
+                </property>
+              </spacer>
+            </item>
+          </layout>
+        </item>
+        <item>
+          <widget class="QTabWidget" name="tabs">
+            <widget class="QWidget" name="dashboardPlaceholder">
+              <attribute name="title">
+                <string>Обзор</string>
+              </attribute>
+            </widget>
+            <widget class="QWidget" name="eventsPlaceholder">
+              <attribute name="title">
+                <string>События</string>
+              </attribute>
+            </widget>
+            <widget class="QWidget" name="incidentsPlaceholder">
+              <attribute name="title">
+                <string>Инциденты</string>
+              </attribute>
+            </widget>
+          </widget>
+        </item>
+      </layout>
+    </widget>
+    <widget class="QMenuBar" name="menubar">
+      <widget class="QMenu" name="menuFile">
+        <property name="title">
+          <string>Файл</string>
+        </property>
+        <addaction name="actionImportCsv" />
+        <addaction name="actionExportCsv" />
+        <addaction name="actionReportTxt" />
+      </widget>
+      <addaction name="menuFile" />
+    </widget>
+    <action name="actionImportCsv">
+      <property name="text">
+        <string>Импорт событий из CSV</string>
+      </property>
+    </action>
+    <action name="actionExportCsv">
+      <property name="text">
+        <string>Экспорт событий в CSV</string>
+      </property>
+    </action>
+    <action name="actionReportTxt">
+      <property name="text">
+        <string>Сохранить отчёт TXT</string>
+      </property>
+    </action>
+    <widget class="QStatusBar" name="statusbar" />
+  </widget>
+  <resources />
+  <connections />
+</ui>

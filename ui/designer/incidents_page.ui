@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>IncidentsPage</class>
+  <widget class="QWidget" name="IncidentsPage">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>850</width>
+        <height>580</height>
+      </rect>
+    </property>
+    <layout class="QVBoxLayout" name="pageLayout">
+      <item>
+        <widget class="QLabel" name="titleLabel">
+          <property name="text">
+            <string>Расследование инцидентов</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="descriptionLabel">
+          <property name="text">
+            <string>Выберите тревогу, измените статус и добавьте комментарий</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QTableWidget" name="table">
+          <column>
+            <property name="text">
+              <string>ID</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>IP</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Тип</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Пользователь</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Статус</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Первое событие</string>
+            </property>
+          </column>
+        </widget>
+      </item>
+      <item>
+        <layout class="QFormLayout" name="detailsLayout">
+          <item row="0" column="0">
+            <widget class="QLabel" name="detailTitle">
+              <property name="text">
+                <string>Детали:</string>
+              </property>
+            </widget>
+          </item>
+          <item row="0" column="1">
+            <widget class="QLabel" name="info">
+              <property name="text">
+                <string>Выберите инцидент в таблице</string>
+              </property>
+              <property name="wordWrap">
+                <bool>true</bool>
+              </property>
+            </widget>
+          </item>
+          <item row="1" column="0">
+            <widget class="QLabel" name="statusTitle">
+              <property name="text">
+                <string>Статус:</string>
+              </property>
+            </widget>
+          </item>
+          <item row="1" column="1">
+            <widget class="QComboBox" name="status" />
+          </item>
+          <item row="2" column="0">
+            <widget class="QLabel" name="notesTitle">
+              <property name="text">
+                <string>Комментарий:</string>
+              </property>
+            </widget>
+          </item>
+          <item row="2" column="1">
+            <widget class="QPlainTextEdit" name="notes">
+              <property name="placeholderText">
+                <string>Что удалось установить при расследовании?</string>
+              </property>
+              <property name="maximumHeight">
+                <number>85</number>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" name="buttonLayout">
+          <item>
+            <spacer name="spacer">
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+                <size>
+                  <width>40</width>
+                  <height>20</height>
+                </size>
+              </property>
+            </spacer>
+          </item>
+          <item>
+            <widget class="QPushButton" name="save">
+              <property name="text">
+                <string>Сохранить изменения</string>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+    </layout>
+  </widget>
+  <resources />
+  <connections />
+</ui>

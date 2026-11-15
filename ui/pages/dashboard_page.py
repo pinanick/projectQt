@@ -1,29 +1,17 @@
-"""Простая сводка по сохранённым событиям."""
+"""Страница обзора. Макет находится в dashboard_page.ui."""
+from PyQt6 import uic
+from PyQt6.QtWidgets import QWidget
 
-from PyQt6.QtWidgets import QLabel, QVBoxLayout, QWidget
-
-from config import EVENT_LABELS
-from ui.common import create_table, make_item
+from config import BASE_DIR, EVENT_LABELS
+from ui.common import configure_table, make_item
 
 
 class DashboardPage(QWidget):
     def __init__(self, repo):
         super().__init__()
         self.repo = repo
-        layout = QVBoxLayout(self)
-
-        # Сводку показываем обычными надписями.
-        self.total_label = QLabel()
-        self.failed_label = QLabel()
-        self.incidents_label = QLabel()
-        layout.addWidget(self.total_label)
-        layout.addWidget(self.failed_label)
-        layout.addWidget(self.incidents_label)
-
-        layout.addWidget(QLabel("Последние события:"))
-        self.table = create_table(["Время", "Пользователь", "IP", "Событие"], 3)
-        layout.addWidget(self.table)
-        layout.addWidget(QLabel("Все события в этой версии искусственные."))
+        uic.loadUi(str(BASE_DIR / "ui" / "designer" / "dashboard_page.ui"), self)
+        configure_table(self.table, 3)
 
     def refresh(self):
         counts = self.repo.get_event_counts()

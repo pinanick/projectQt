@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>DashboardPage</class>
+  <widget class="QWidget" name="DashboardPage">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>500</height>
+      </rect>
+    </property>
+    <layout class="QVBoxLayout" name="pageLayout">
+      <item>
+        <widget class="QLabel" name="total_label">
+          <property name="text">
+            <string>Всего событий: 0</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="failed_label">
+          <property name="text">
+            <string>Ошибок входа: 0</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="incidents_label">
+          <property name="text">
+            <string>Инцидентов: 0</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="recentEventsTitle">
+          <property name="text">
+            <string>Последние события:</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QTableWidget" name="table">
+          <column>
+            <property name="text">
+              <string>Время</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Пользователь</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>IP</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Событие</string>
+            </property>
+          </column>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="warningLabel">
+          <property name="text">
+            <string>Все события в этой версии искусственные.</string>
+          </property>
+        </widget>
+      </item>
+    </layout>
+  </widget>
+  <resources />
+  <connections />
+</ui>

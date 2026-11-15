@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+  <class>EventsPage</class>
+  <widget class="QWidget" name="EventsPage">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>500</height>
+      </rect>
+    </property>
+    <layout class="QVBoxLayout" name="pageLayout">
+      <item>
+        <widget class="QLabel" name="titleLabel">
+          <property name="text">
+            <string>Журнал событий</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="descriptionLabel">
+          <property name="text">
+            <string>Поиск по пользователю или IP и фильтр типов событий</string>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <layout class="QHBoxLayout" name="filterLayout">
+          <item>
+            <widget class="QLineEdit" name="search">
+              <property name="placeholderText">
+                <string>Поиск по IP или имени пользователя...</string>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QComboBox" name="kind" />
+          </item>
+        </layout>
+      </item>
+      <item>
+        <widget class="QTableWidget" name="table">
+          <column>
+            <property name="text">
+              <string>ID</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Время</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Пользователь</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>IP</string>
+            </property>
+          </column>
+          <column>
+            <property name="text">
+              <string>Тип события</string>
+            </property>
+          </column>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="counter">
+          <property name="text">
+            <string>Показано: 0</string>
+          </property>
+        </widget>
+      </item>
+    </layout>
+  </widget>
+  <resources />
+  <connections />
+</ui>
