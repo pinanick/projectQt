@@ -26,7 +26,6 @@ CyberLab — учебное настольное приложение на Pytho
 ```text
 main.py                         точка входа приложения
 config.py                       пути, пороги и подписи
-assets/style.qss                таблица стилей Qt
 core/
   event_generator.py            генерация искусственных событий
   event_analyzer.py             два алгоритма обнаружения
@@ -43,7 +42,6 @@ ui/
     dashboard_page.py           сводка
     events_page.py              журнал и фильтры
     incidents_page.py            список и обработка инцидентов
-    rules_page.py                неиспользуемая/несогласованная старая страница
   designer/
     *.ui                         XML-макеты интерфейса
 examples/
